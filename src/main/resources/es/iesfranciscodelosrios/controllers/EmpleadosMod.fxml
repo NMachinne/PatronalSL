@@ -14,7 +14,7 @@
    <children>
       <HBox prefHeight="59.0" prefWidth="355.0">
          <children>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="AGREGAR EMPLEADO" textAlignment="CENTER" wrappingWidth="361.0400390625">
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="MODIFICAR EMPLEADO" textAlignment="CENTER" wrappingWidth="361.0400390625">
                <font>
                   <Font size="31.0" />
                </font>
@@ -50,7 +50,12 @@
             </HBox>
             <HBox layoutX="7.0" layoutY="181.0" prefHeight="59.0" prefWidth="348.0">
                <children>
-                  <Button fx:id="bt_save" mnemonicParsing="false" onAction="#guardar" prefHeight="59.0" prefWidth="132.0" style="-fx-background-color: #e6e9f5;" text="GUARDAR" />
+                  <Button fx:id="bt_save" mnemonicParsing="false" onAction="#Actualizar" prefHeight="59.0" prefWidth="132.0" style="-fx-background-color: #e6e9f5;" text="ACTUALIZAR" />
+               </children>
+            </HBox>
+            <HBox layoutX="7.0" layoutY="142.0" prefHeight="25.0" prefWidth="130.0">
+               <children>
+                  <TextField fx:id="txt_id" layoutX="7.0" layoutY="4.0" prefHeight="25.0" prefWidth="130.0" promptText="ID" />
                </children>
             </HBox>
          </children>
