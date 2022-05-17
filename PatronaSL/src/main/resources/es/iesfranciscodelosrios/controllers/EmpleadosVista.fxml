@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="514.0" minWidth="699.0" prefHeight="514.0" prefWidth="699.0" style="-fx-background-color: #270949; -fx-border-color: #270949;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.iesfranciscodelosrios.controllers.EmpleadosController">
+   <children>
+      <AnchorPane layoutY="2.0" prefHeight="514.0" prefWidth="232.0" style="-fx-background-color: #ffff; -fx-border-color: #4654a3;" AnchorPane.bottomAnchor="-2.0" AnchorPane.topAnchor="1.0">
+         <children>
+            <Button fx:id="bt_add" layoutX="50.0" layoutY="324.0" mnemonicParsing="false" onAction="#EmpleadoAdd" prefHeight="40.0" prefWidth="150.0" style="-fx-background-size: 4; -fx-font-size: 18; -fx-background-color: #4654a3;" stylesheets="@../css/buton.css" text="AÑADIR" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="38.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/agregar-usuario.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="11.0" />
+               </font></Button>
+            <Button fx:id="bt_del" layoutX="50.0" layoutY="444.0" mnemonicParsing="false" onAction="#EmpleadoDel" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: #4654a3; -fx-font-size: 18;" text="ELIMINAR" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="38.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/eliminar.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button fx:id="bt_upt" layoutX="50.0" layoutY="386.0" mnemonicParsing="false" onAction="#EmpleadoMod" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: #4654a3; -fx-font-size: 15;" stylesheets="@../css/buton.css" text="MODIFICAR" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="38.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/retroalimentacion.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Pane layoutY="-2.0" prefHeight="160.0" prefWidth="234.0" style="-fx-background-color: #4654a3;" AnchorPane.leftAnchor="-1.0">
+               <children>
+                  <ImageView fitHeight="116.0" fitWidth="247.0" layoutX="11.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true" smooth="false">
+                     <image>
+                        <Image url="@../images/patronalLogo.PNG" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+      <TableView fx:id="tablaEmpleado" layoutX="244.0" layoutY="169.0" prefHeight="344.0" prefWidth="460.0" style="-fx-background-color: #f95b3d;" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="243.0" AnchorPane.rightAnchor="-4.0" AnchorPane.topAnchor="168.0">
+        <columns>
+            <TableColumn fx:id="col_id" prefWidth="42.0" text="ID" />
+          <TableColumn fx:id="col_nombre" prefWidth="81.0" text="NOMBRE" />
+          <TableColumn fx:id="col_dni" prefWidth="91.0" text="DNI" />
+            <TableColumn fx:id="col_estado" prefWidth="86.0" text="ESTADO" />
+            <TableColumn fx:id="col_puesto" prefWidth="75.0" text="PUESTO" />
+            <TableColumn fx:id="col_experiencia" prefWidth="88.0" text="EXPERIENCIA" />
+        </columns>
+      </TableView>
+      <AnchorPane layoutX="231.0" layoutY="-1.0" prefHeight="160.0" prefWidth="471.0" style="-fx-background-color: #4654a3;" AnchorPane.leftAnchor="230.0" AnchorPane.rightAnchor="-2.0" AnchorPane.topAnchor="-2.0">
+         <children>
+            <TextField fx:id="filtro" layoutX="24.0" layoutY="119.0" onInputMethodTextChanged="#EmpleadoFind" style="-fx-background-color: #ffff;" />
+            <ImageView fitHeight="33.0" fitWidth="36.0" layoutX="185.0" layoutY="116.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/buscar.png" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
+   </children>
+</AnchorPane>
