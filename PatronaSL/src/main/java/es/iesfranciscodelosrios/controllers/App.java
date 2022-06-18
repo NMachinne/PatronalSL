@@ -8,17 +8,20 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+
 /**
  * JavaFX App
  */
+
+
 public class App extends Application {
 
     private static Scene scene;
 
     @Override
     public void start(Stage stage) throws IOException {
-        scene = new Scene(loadFXML("EmpleadosVista"), 750, 520);
-                
+       // scene = new Scene(loadFXML("EmpleadosVista"), 750, 520);
+    	scene = new Scene(loadFXML("vistaPrincip"), 850, 520);
         stage.setScene(scene);
         stage.show();
     }

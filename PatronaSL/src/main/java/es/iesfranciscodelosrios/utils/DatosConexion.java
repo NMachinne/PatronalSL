@@ -5,17 +5,18 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlRootElement;
 
-@XmlRootElement(name="conexion")
+@XmlRootElement(name = "conexion")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class DatosConexion implements Serializable{
-	
+public class DatosConexion implements Serializable {
+
 	private static final long serialVersionUID = 1L;
 	private String server;
 	private String database;
 	private String username;
 	private String password;
-	
-	public DatosConexion() {}
+
+	public DatosConexion() {
+	}
 
 	public String getServer() {
 		return server;
